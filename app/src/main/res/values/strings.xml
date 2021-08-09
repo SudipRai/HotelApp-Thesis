@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">HotelAide</string>
+    <string name="welcome">Welcome to<br /> our Hotel!</string>
 </resources>
