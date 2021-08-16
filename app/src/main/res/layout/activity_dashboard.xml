@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-
+android:id="@+id/drawerLayout"
     tools:context=".ui.DashboardActivity">
 
     <ScrollView
@@ -14,16 +14,28 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:orientation="vertical">
+            android:orientation="vertical"
+            tools:ignore="MissingClass">
 
-            <RelativeLayout
-                android:id="@+id/dashboardheader"
+
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+            <com.synnapps.carouselview.CarouselView
+                android:id="@+id/carouselView"
                 android:layout_width="420dp"
                 android:layout_height="260dp"
-                android:layout_gravity="center"
-                android:background="@drawable/slide"
+                app:slideInterval="3000"
+                app:strokeWidth="1dp" />
 
-                />
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/button" />
+
+</RelativeLayout>
 
             <GridLayout
                 android:layout_width="match_parent"
@@ -274,6 +286,14 @@
 
     </ScrollView>
 
+    <com.google.android.material.navigation.NavigationView
+        android:id="@+id/navView"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        app:headerLayout="@layout/nav_header"
+        app:menu="@menu/drawer_menu">
 
+    </com.google.android.material.navigation.NavigationView>
 
 </androidx.drawerlayout.widget.DrawerLayout>
