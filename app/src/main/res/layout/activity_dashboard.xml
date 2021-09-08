@@ -4,287 +4,36 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-android:id="@+id/drawerLayout"
+    android:orientation="vertical"
+    android:id="@+id/drawerLayout"
     tools:context=".ui.DashboardActivity">
-
-    <ScrollView
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="vertical"
-            tools:ignore="MissingClass">
-
-
-<RelativeLayout
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content">
-
-            <com.synnapps.carouselview.CarouselView
-                android:id="@+id/carouselView"
-                android:layout_width="420dp"
-                android:layout_height="260dp"
-                app:slideInterval="3000"
-                app:strokeWidth="1dp" />
 
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/toolbar"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@drawable/button" />
+        android:layout_height="45dp"
+        android:background="@color/red"
+        app:title="Services"
+        app:titleTextColor="@color/white"
+        app:titleMarginStart="30dp"
+        tools:ignore="MissingConstraints" />
 
-</RelativeLayout>
-
-            <GridLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:columnCount="2"
-                android:layout_marginTop="-45dp"
-                android:padding="5dp"
-                android:layout_marginLeft="30dp">
-
-                <androidx.cardview.widget.CardView
-                    android:id="@+id/cvCampaigns"
-                    android:layout_width="150dp"
-                    android:layout_height="150dp"
-                    android:layout_margin="10dp"
-                    app:cardElevation="7dp"
-
-                    app:cardCornerRadius="10dp"
-                    >
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:orientation="vertical"
-                        android:layout_margin="2dp"
-                        android:padding="10dp"
-
-
-                        >
-
-                        <ImageView
-                            android:layout_width="100dp"
-                            android:layout_height="100dp"
-                            android:background="@drawable/fastfood"
-                            android:layout_gravity="center_horizontal|center_vertical"
-                            />
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="Food and Drinks"
-                            android:textSize="15sp"
-
-                            android:layout_gravity="center_horizontal"
-
-                            android:textStyle="bold"
-
-                            />
-                    </LinearLayout>
-
-                </androidx.cardview.widget.CardView>
-
-                <androidx.cardview.widget.CardView
-                    android:id="@+id/cvDonation"
-                    android:layout_width="150dp"
-                    android:layout_height="150dp"
-                    android:layout_margin="10dp"
-                    app:cardElevation="7dp"
-                    app:cardCornerRadius="10dp"
-                    >
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:orientation="vertical"
-                        android:layout_margin="2dp"
-                        android:padding="10dp"
-
-                        >
-
-                        <ImageView
-                            android:layout_width="100dp"
-                            android:layout_height="100dp"
-                            android:background="@drawable/bellboy"
-                            android:layout_gravity="center_horizontal|center_vertical"
-                            />
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="Service"
-                            android:textSize="15sp"
-
-
-
-                            android:layout_gravity="center_horizontal"
-                            android:textStyle="bold"
-
-                            />
-                    </LinearLayout>
-
-                </androidx.cardview.widget.CardView>
-
-                <androidx.cardview.widget.CardView
-                    android:id="@+id/cvRequest"
-                    android:layout_width="150dp"
-                    android:layout_height="150dp"
-                    android:layout_margin="10dp"
-                    app:cardElevation="7dp"
-                    app:cardCornerRadius="10dp"
-                    >
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:orientation="vertical"
-                        android:layout_margin="2dp"
-                        android:padding="10dp"
-
-                        >
-
-                        <ImageView
-                            android:layout_width="100dp"
-                            android:layout_height="100dp"
-                            android:background="@drawable/amenities"
-                            android:layout_gravity="center_horizontal|center_vertical"
-                            />
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="Hotel Aminity"
-                            android:textSize="15sp"
-
-                            android:layout_gravity="center_horizontal"
-                            android:textStyle="bold"
-
-                            />
-                    </LinearLayout>
-
-                </androidx.cardview.widget.CardView>
-
-                <androidx.cardview.widget.CardView
-                    android:id="@+id/cvGallery"
-                    android:layout_width="150dp"
-                    android:layout_height="150dp"
-                    android:layout_margin="10dp"
-                    app:cardElevation="7dp"
-                    app:cardCornerRadius="10dp"
-                    >
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:orientation="vertical"
-                        android:layout_margin="2dp"
-                        android:padding="10dp"
-
-
-                        >
-
-                        <ImageView
-                            android:layout_width="100dp"
-                            android:layout_height="100dp"
-                            android:background="@drawable/factory"
-                            android:layout_gravity="center_horizontal|center_vertical"
-                            />
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="Facilities"
-                            android:textSize="15sp"
-
-                            android:layout_gravity="center_horizontal"
-                            android:textStyle="bold"
-
-                            />
-                    </LinearLayout>
-
-                </androidx.cardview.widget.CardView>
-
-                <androidx.cardview.widget.CardView
-                    android:id="@+id/cvFAQ"
-                    android:layout_width="150dp"
-                    android:layout_height="150dp"
-                    android:layout_margin="10dp"
-                    app:cardElevation="7dp"
-                    app:cardCornerRadius="10dp"
-                    >
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:orientation="vertical"
-                        android:layout_margin="2dp"
-                        android:padding="10dp"
-
-                        >
-
-                        <ImageView
-                            android:layout_width="100dp"
-                            android:layout_height="100dp"
-                            android:background="@drawable/order"
-                            android:layout_gravity="center_horizontal|center_vertical"
-                            />
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="Checkout"
-                            android:textSize="15sp"
-                            android:layout_gravity="center_horizontal"
-                            android:textStyle="bold"
-
-                            />
-                    </LinearLayout>
-
-                </androidx.cardview.widget.CardView>
-
-                <androidx.cardview.widget.CardView
-                    android:id="@+id/cvMap"
-                    android:layout_width="150dp"
-                    android:layout_height="150dp"
-                    android:layout_margin="10dp"
-                    app:cardElevation="7dp"
-                    app:cardCornerRadius="10dp">
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:orientation="vertical"
-                        android:layout_margin="2dp"
-                        android:padding="10dp"
-                        >
-
-                        <ImageView
-                            android:layout_width="100dp"
-                            android:layout_height="100dp"
-                            android:background="@drawable/rating"
-                            android:layout_gravity="center_horizontal|center_vertical" />
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="Feedback"
-                            android:textSize="15sp"
-                            android:layout_gravity="center_horizontal"
-                            android:textStyle="bold"
-
-                            />
-                    </LinearLayout>
-                </androidx.cardview.widget.CardView>
-
-
-            </GridLayout>
-
-        </LinearLayout>
-
-    </ScrollView>
+    <androidx.recyclerview.widget.RecyclerView
+        app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+        android:id="@+id/recyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginTop="10dp"
+        />
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
     <com.google.android.material.navigation.NavigationView
         android:id="@+id/navView"
@@ -295,5 +44,8 @@ android:id="@+id/drawerLayout"
         app:menu="@menu/drawer_menu">
 
     </com.google.android.material.navigation.NavigationView>
+
+
+
 
 </androidx.drawerlayout.widget.DrawerLayout>

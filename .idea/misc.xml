@@ -10,9 +10,21 @@
         <entry key="..\:/Users/Lenovo Thinkbook/AndroidStudioProjects/HotelAide/app/src/main/res/drawable/custom_date.xml" value="0.2703125" />
         <entry key="..\:/Users/Lenovo Thinkbook/AndroidStudioProjects/HotelAide/app/src/main/res/drawable/edittext.xml" value="0.26666666666666666" />
         <entry key="..\:/Users/Lenovo Thinkbook/AndroidStudioProjects/HotelAide/app/src/main/res/drawable/ic_addticket.xml" value="0.203125" />
+        <entry key="..\:/Users/Lenovo Thinkbook/AndroidStudioProjects/HotelAide/app/src/main/res/drawable/ic_home.xml" value="0.2703125" />
+        <entry key="..\:/Users/Lenovo Thinkbook/AndroidStudioProjects/HotelAide/app/src/main/res/drawable/ic_launcher_background.xml" value="0.2703125" />
+        <entry key="..\:/Users/Lenovo Thinkbook/AndroidStudioProjects/HotelAide/app/src/main/res/drawable/ic_logout.xml" value="0.2703125" />
         <entry key="..\:/Users/Lenovo Thinkbook/AndroidStudioProjects/HotelAide/app/src/main/res/drawable/ic_person.xml" value="0.15520833333333334" />
-        <entry key="..\:/Users/Lenovo Thinkbook/AndroidStudioProjects/HotelAide/app/src/main/res/layout/activity_dashboard.xml" value="0.2754946727549467" />
+        <entry key="..\:/Users/Lenovo Thinkbook/AndroidStudioProjects/HotelAide/app/src/main/res/drawable/tabborder.xml" value="0.2703125" />
+        <entry key="..\:/Users/Lenovo Thinkbook/AndroidStudioProjects/HotelAide/app/src/main/res/layout/activity_dashboard.xml" value="0.2" />
+        <entry key="..\:/Users/Lenovo Thinkbook/AndroidStudioProjects/HotelAide/app/src/main/res/layout/activity_food.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/Lenovo Thinkbook/AndroidStudioProjects/HotelAide/app/src/main/res/layout/activity_login.xml" value="0.12760416666666666" />
+        <entry key="..\:/Users/Lenovo Thinkbook/AndroidStudioProjects/HotelAide/app/src/main/res/layout/activity_main.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/Lenovo Thinkbook/AndroidStudioProjects/HotelAide/app/src/main/res/layout/activity_stream.xml" value="0.24010416666666667" />
+        <entry key="..\:/Users/Lenovo Thinkbook/AndroidStudioProjects/HotelAide/app/src/main/res/layout/activity_tab.xml" value="0.24010416666666667" />
+        <entry key="..\:/Users/Lenovo Thinkbook/AndroidStudioProjects/HotelAide/app/src/main/res/layout/fragment_checkout.xml" value="0.1765625" />
+        <entry key="..\:/Users/Lenovo Thinkbook/AndroidStudioProjects/HotelAide/app/src/main/res/layout/fragment_dashboard.xml" value="0.24010416666666667" />
+        <entry key="..\:/Users/Lenovo Thinkbook/AndroidStudioProjects/HotelAide/app/src/main/res/layout/fragment_streaming.xml" value="0.1765625" />
+        <entry key="..\:/Users/Lenovo Thinkbook/AndroidStudioProjects/HotelAide/app/src/main/res/layout/merolayout.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/Lenovo Thinkbook/AndroidStudioProjects/HotelAide/app/src/main/res/layout/nav_header.xml" value="0.18697916666666667" />
         <entry key="..\:/Users/Lenovo Thinkbook/AndroidStudioProjects/HotelAide/app/src/main/res/menu/drawer_menu.xml" value="0.18697916666666667" />
         <entry key="..\:/Users/Lenovo Thinkbook/AndroidStudioProjects/HotelAide/app/src/main/res/menu/menu.xml" value="0.18697916666666667" />
