@@ -12,14 +12,11 @@ import androidx.appcompat.widget.Toolbar
 import androidx.drawerlayout.widget.DrawerLayout
 import com.google.android.material.navigation.NavigationView
 import com.sudip.hotelaide.R
-import com.sudip.hotelaide.ui.DashboardActivity
-import com.sudip.hotelaide.ui.LoginActivity
 import com.synnapps.carouselview.CarouselView
 import com.synnapps.carouselview.ImageListener
 import androidx.appcompat.app.AppCompatActivity
 import androidx.cardview.widget.CardView
-import com.sudip.hotelaide.ui.FoodActivity
-import com.sudip.hotelaide.ui.StreamActivity
+import com.sudip.hotelaide.ui.*
 
 
 class DashboardFragment : Fragment() {
@@ -28,6 +25,8 @@ class DashboardFragment : Fragment() {
     private lateinit var food:CardView
     private lateinit var service:CardView
     private lateinit var stream:CardView
+    private lateinit var cs:CardView
+    private lateinit var feedback:CardView
 
     private var sampleImage = intArrayOf(R.drawable.slide, R.drawable.slide1, R.drawable.slide2)
 
@@ -47,12 +46,30 @@ class DashboardFragment : Fragment() {
         food=view.findViewById(R.id.food)
         service=view.findViewById(R.id.service)
         stream=view.findViewById(R.id.stream)
+        cs=view.findViewById(R.id.cs)
+        feedback=view.findViewById(R.id.feedback)
 
         food.setOnClickListener {
             startActivity(
                 Intent(
                     context,
                     FoodActivity::class.java
+                )
+            )
+        }
+        feedback.setOnClickListener {
+            startActivity(
+                Intent(
+                    context,
+                    Feedback::class.java
+                )
+            )
+        }
+        cs.setOnClickListener {
+            startActivity(
+                Intent(
+                    context,
+                    Customerservice::class.java
                 )
             )
         }

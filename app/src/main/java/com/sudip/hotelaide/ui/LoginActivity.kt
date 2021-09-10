@@ -64,6 +64,7 @@ class LoginActivity : AppCompatActivity() {
                         // dashboard khola
                         ServiceBuilder.token = "Bearer ${response.token}"
                         ServiceBuilder.userID = response.data
+                        ServiceBuilder.roomno = response.roomno
                             startActivity(
                                 Intent(
                                     this@LoginActivity,

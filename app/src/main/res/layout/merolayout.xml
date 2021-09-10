@@ -12,7 +12,7 @@
 
 
     <androidx.cardview.widget.CardView
-        android:id="@+id/cvCampaigns"
+        android:id="@+id/services"
         android:layout_width="150dp"
         android:layout_height="130dp"
         android:layout_marginStart="30dp"

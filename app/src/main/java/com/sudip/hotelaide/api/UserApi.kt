@@ -1,10 +1,12 @@
 package com.sudip.hotelaide.api
 
-import com.sudip.hotelaide.response.LoginResponse
+import com.sudip.hotelaide.entity.CustomerService
+import com.sudip.hotelaide.entity.Feedbackmsg
+import com.sudip.hotelaide.entity.Food
+import com.sudip.hotelaide.entity.Service
+import com.sudip.hotelaide.response.*
 import retrofit2.Response
-import retrofit2.http.Field
-import retrofit2.http.FormUrlEncoded
-import retrofit2.http.POST
+import retrofit2.http.*
 
 interface UserApi {
     //for login
@@ -14,4 +16,28 @@ interface UserApi {
         @Field("roomno") roomno: String,
         @Field("password") password: String
     ): Response<LoginResponse>
+
+    @POST("add/service")
+    suspend fun addService(
+        @Header("Authorization") token:String,
+        @Body addService: Service
+    ): Response<AddServiceResponse>
+
+    @POST("send/message")
+    suspend fun sendMessage(
+        @Header("Authorization") token:String,
+        @Body send: CustomerService
+    ): Response<MessageResponse>
+
+    @POST("send/feedback")
+    suspend fun sendFeedback(
+        @Header("Authorization") token:String,
+        @Body feedback: Feedbackmsg
+    ): Response<FeedbackResponse>
+
+    @POST("add/food")
+    suspend fun foodOrder(
+        @Header("Authorization") token:String,
+        @Body food: Food
+    ): Response<FoodResponse>
 }

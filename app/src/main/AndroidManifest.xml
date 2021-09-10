@@ -19,30 +19,38 @@
         android:theme="@style/Theme.HotelAide"
         android:usesCleartextTraffic="true">
         <activity
+            android:name=".ui.Feedback"
+            android:exported="true" />
+        <activity
+            android:name=".ui.Customerservice"
+            android:exported="true" />
+        <activity
             android:name=".ui.StreamActivity"
             android:exported="true" />
         <activity
             android:name=".ui.FoodActivity"
+            android:exported="true" />
+        <activity
+            android:name=".ui.TabActivity"
             android:exported="true">
 
         </activity>
         <activity
-            android:name=".ui.TabActivity"
-            android:exported="true">
+            android:name=".ui.DashboardActivity"
+            android:exported="true" >
+
+        </activity>
+        <activity
+            android:name=".ui.LoginActivity"
+            android:exported="true" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+
         </activity>
-        <activity
-            android:name=".ui.DashboardActivity"
-            android:exported="true">
-        </activity>
-        <activity
-            android:name=".ui.LoginActivity"
-            android:exported="true" />
-        <activity android:name=".MainActivity"></activity>
+        <activity android:name=".MainActivity" />
     </application>
 
 </manifest>
