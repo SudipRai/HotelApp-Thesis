@@ -1,14 +1,166 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".fragments.CheckoutFragment">
 
-    <!-- TODO: Update blank fragment layout -->
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        app:title="Checkout"
+        app:titleTextColor="@color/white"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/red" />
     <TextView
+        android:layout_marginTop="50dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Hotel Aide"
+        android:gravity="center"
+        android:textStyle="bold"
+        android:textColor="@color/teal_700"
+        android:textSize="24sp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="60dp"
+        android:orientation="horizontal">
+
+    <TextView
+        android:layout_width="130dp"
+        android:layout_height="wrap_content"
+        android:textSize="18sp"
+        android:layout_marginLeft="20dp"
+        android:textStyle="bold"
+        android:text="Room Number: "/>
+        <TextView
+            android:id="@+id/roomno"
+            android:layout_width="130dp"
+            android:layout_height="wrap_content"
+            android:textSize="18sp"
+            android:text="201"/>
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="90dp"
+            android:layout_marginLeft="20dp"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:textSize="18sp"
+            android:text="Name:"/>
+        <TextView
+            android:id="@+id/name"
+            android:layout_width="130dp"
+            android:layout_height="wrap_content"
+            android:textSize="18sp"
+            android:text="sudip"/>
+
+    </LinearLayout>
+
+    <TableLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:layout_marginTop="60dp"
+        android:stretchColumns="1">
+        <TableRow>
+            <TextView
+                android:text="Description"
+                android:width="200dp"
+                android:layout_marginLeft="20dp"
+                android:padding="3dp" />
+            <TextView
+                android:text="Amount"
+                android:layout_marginRight="50dp"
+                android:gravity="right"
+                android:padding="3dip" />
+        </TableRow>
+        <View
+            android:layout_height="2dip"
+            android:background="#FF909090" />
+        <TableRow>
+            <TextView
+                android:text="Food"
+                android:layout_marginLeft="25dp"
+                android:padding="3dip" />
+            <TextView
+                android:id="@+id/pricefood"
+                android:text="1000"
+                android:layout_marginRight="50dp"
+                android:gravity="right"
+                android:padding="3dip" />
+        </TableRow>
+        <TableRow>
+            <TextView
+                android:layout_marginLeft="25dp"
+                android:text="Room Charge"
+                android:padding="3dip" />
+            <TextView
+                android:text="1000"
+                android:layout_marginRight="50dp"
+                android:gravity="right"
+                android:id="@+id/roomcharge"
+                android:padding="3dip" />
+        </TableRow>
+        <TableRow>
+            <TextView
+                android:layout_marginLeft="25dp"
+                android:text="Service Charge(10%)"
+                android:padding="3dip" />
+            <TextView
+                android:text="1000"
+                android:id="@+id/scharge"
+                android:layout_marginRight="50dp"
+                android:gravity="right"
+                android:padding="3dip" />
+        </TableRow>
+        <View
+            android:layout_height="2dip"
+            android:background="#FF909090" />
+        <TableRow>
+            <TextView
+                android:layout_marginLeft="25dp"
+                android:text="Total"
+                android:padding="3dip" />
+            <TextView
+                android:text="1000"
+                android:id="@+id/total"
+                android:layout_marginRight="50dp"
+                android:gravity="right"
+                android:padding="3dip" />
+        </TableRow>
+    </TableLayout>
 
-</FrameLayout>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnreq"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginEnd="50dp"
+        android:backgroundTint="@color/login"
+        android:fontFamily="@font/roboto"
+        android:text="Request Checkout"
+        android:textAllCaps="false"
+        android:textSize="18sp"
+        app:cornerRadius="20dp" />
+
+
+
+
+</LinearLayout>
+
+</LinearLayout>

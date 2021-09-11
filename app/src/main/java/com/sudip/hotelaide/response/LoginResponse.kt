@@ -5,5 +5,6 @@ data class LoginResponse (
     val token:String?=null,
     val data:String?=null,
     val roomno:String?=null,
+    val fullname:String?=null,
 
 )

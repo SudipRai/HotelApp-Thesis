@@ -1,9 +1,6 @@
 package com.sudip.hotelaide.api
 
-import com.sudip.hotelaide.entity.CustomerService
-import com.sudip.hotelaide.entity.Feedbackmsg
-import com.sudip.hotelaide.entity.Food
-import com.sudip.hotelaide.entity.Service
+import com.sudip.hotelaide.entity.*
 import com.sudip.hotelaide.response.*
 import retrofit2.Response
 import retrofit2.http.*
@@ -39,5 +36,17 @@ interface UserApi {
     suspend fun foodOrder(
         @Header("Authorization") token:String,
         @Body food: Food
+    ): Response<FoodResponse>
+
+    @GET("myfood/{id}")
+    suspend fun getmyfood(
+        @Header("Authorization") token: String,
+        @Path("id") id: String,
+    ):Response<GetFoodResponse>
+
+    @POST("checkout")
+    suspend fun checkout(
+        @Header("Authorization") token:String,
+        @Body checkout: Checkout
     ): Response<FoodResponse>
 }

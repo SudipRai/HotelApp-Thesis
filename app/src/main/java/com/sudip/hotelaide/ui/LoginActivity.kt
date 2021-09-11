@@ -61,10 +61,12 @@ class LoginActivity : AppCompatActivity() {
                     val repository = UserRepository()
                     val response = repository.checkUser(roomno, password)
                     if (response.message == "success") {
+                        saveSharedPref()
                         // dashboard khola
                         ServiceBuilder.token = "Bearer ${response.token}"
                         ServiceBuilder.userID = response.data
                         ServiceBuilder.roomno = response.roomno
+                        ServiceBuilder.fullname = response.fullname
                             startActivity(
                                 Intent(
                                     this@LoginActivity,
@@ -103,5 +105,18 @@ class LoginActivity : AppCompatActivity() {
         dont=findViewById(R.id.dont)
         linearlayout=findViewById(R.id.linearlayout)
 
+    }
+    private fun saveSharedPref() {
+        val roomno = etname.text.toString()
+        val password = etpassword.text.toString()
+
+
+        val sharedPref = getSharedPreferences("MyPref",
+            MODE_PRIVATE)
+        val editor = sharedPref.edit()
+        editor.putString("roomno", roomno)
+        editor.putString("password", password)
+
+        editor.apply()
     }
 }

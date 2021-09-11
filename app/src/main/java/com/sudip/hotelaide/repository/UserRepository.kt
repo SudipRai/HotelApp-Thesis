@@ -3,10 +3,7 @@ package com.sudip.hotelaide.repository
 import com.sudip.hotelaide.api.ServiceBuilder
 import com.sudip.hotelaide.api.UserApi
 import com.sudip.hotelaide.api.myApiRequest
-import com.sudip.hotelaide.entity.CustomerService
-import com.sudip.hotelaide.entity.Feedbackmsg
-import com.sudip.hotelaide.entity.Food
-import com.sudip.hotelaide.entity.Service
+import com.sudip.hotelaide.entity.*
 import com.sudip.hotelaide.response.*
 
 class UserRepository:myApiRequest() {
@@ -39,6 +36,19 @@ class UserRepository:myApiRequest() {
     suspend fun foodOrder(food: Food): FoodResponse {
         return apiRequest {
             userApi.foodOrder(ServiceBuilder.token!!,food)
+        }
+    }
+
+    suspend fun checkout(checkout: Checkout): FoodResponse {
+        return apiRequest {
+            userApi.checkout(ServiceBuilder.token!!,checkout)
+        }
+    }
+
+
+    suspend fun getmyFood(id:String): GetFoodResponse {
+        return apiRequest {
+            userApi.getmyfood(ServiceBuilder.token!!,id)
         }
     }
 }

@@ -12,6 +12,7 @@ object ServiceBuilder {
     var userID:String?=null
     var roomno:String?=null
     var role:String?=null
+    var fullname:String?=null
     private val okHttp= OkHttpClient.Builder()
     private val retrofitBuilder= Retrofit.Builder()
         .baseUrl(BASE_URL)
